@@ -1,0 +1,12 @@
+original_files/**
+documentation/**
+mockups/**
+.vscode/**
+agents.md
+AGENTS.md
+/images/**
+extract_game_files.bat
+extract_game_files.ps1
+screenshot*.png
+image.png
+screenshot*.jpg

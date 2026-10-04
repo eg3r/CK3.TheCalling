@@ -1,0 +1,940 @@
+﻿tc_GuestDescription = {
+	type = character
+
+	text = {
+		trigger = {
+			tc_guest_weight_prowess_value > 0
+			tc_guest_weight_prowess_value >= tc_guest_weight_martial_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_learning_value
+			prowess >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_prowess_outstanding
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_prowess_value > 0
+			tc_guest_weight_prowess_value >= tc_guest_weight_martial_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_learning_value
+			prowess >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_prowess_experienced
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_prowess_value > 0
+			tc_guest_weight_prowess_value >= tc_guest_weight_martial_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_prowess_value >= tc_guest_weight_learning_value
+		}
+		localization_key = tc_guest_desc_prowess_competent
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_outstanding_3
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_outstanding_2
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_outstanding_1
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+		}
+		localization_key = tc_guest_desc_martial_outstanding_0
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_experienced_3
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_experienced_2
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_experienced_1
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+		}
+		localization_key = tc_guest_desc_martial_experienced_0
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_competent_3
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_competent_2
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_competent_1
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_martial_value > 0
+			tc_guest_weight_martial_value > tc_guest_weight_prowess_value
+			tc_guest_weight_martial_value >= tc_guest_weight_diplomacy_value
+			tc_guest_weight_martial_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_martial_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_martial_value >= tc_guest_weight_learning_value
+		}
+		localization_key = tc_guest_desc_martial_competent_0
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_diplomacy_value > 0
+			tc_guest_weight_diplomacy_value > tc_guest_weight_prowess_value
+			tc_guest_weight_diplomacy_value > tc_guest_weight_martial_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_learning_value
+			diplomacy >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_diplomacy_outstanding
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_diplomacy_value > 0
+			tc_guest_weight_diplomacy_value > tc_guest_weight_prowess_value
+			tc_guest_weight_diplomacy_value > tc_guest_weight_martial_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_learning_value
+			diplomacy >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_diplomacy_experienced
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_diplomacy_value > 0
+			tc_guest_weight_diplomacy_value > tc_guest_weight_prowess_value
+			tc_guest_weight_diplomacy_value > tc_guest_weight_martial_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_stewardship_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_diplomacy_value >= tc_guest_weight_learning_value
+		}
+		localization_key = tc_guest_desc_diplomacy_competent
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_stewardship_value > 0
+			tc_guest_weight_stewardship_value > tc_guest_weight_prowess_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_martial_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_learning_value
+			stewardship >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_stewardship_outstanding
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_stewardship_value > 0
+			tc_guest_weight_stewardship_value > tc_guest_weight_prowess_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_martial_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_learning_value
+			stewardship >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_stewardship_experienced
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_stewardship_value > 0
+			tc_guest_weight_stewardship_value > tc_guest_weight_prowess_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_martial_value
+			tc_guest_weight_stewardship_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_intrigue_value
+			tc_guest_weight_stewardship_value >= tc_guest_weight_learning_value
+		}
+		localization_key = tc_guest_desc_stewardship_competent
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_intrigue_value > 0
+			tc_guest_weight_intrigue_value > tc_guest_weight_prowess_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_martial_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_intrigue_value >= tc_guest_weight_learning_value
+			intrigue >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_intrigue_outstanding
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_intrigue_value > 0
+			tc_guest_weight_intrigue_value > tc_guest_weight_prowess_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_martial_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_intrigue_value >= tc_guest_weight_learning_value
+			intrigue >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_intrigue_experienced
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_intrigue_value > 0
+			tc_guest_weight_intrigue_value > tc_guest_weight_prowess_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_martial_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_intrigue_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_intrigue_value >= tc_guest_weight_learning_value
+		}
+		localization_key = tc_guest_desc_intrigue_competent
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_outstanding_physician
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_outstanding_mystic
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_outstanding_herbalist
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+		}
+		localization_key = tc_guest_desc_learning_outstanding_none
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			learning >= high_skill_rating
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_experienced_physician
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			learning >= high_skill_rating
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_experienced_mystic
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			learning >= high_skill_rating
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_experienced_herbalist
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			learning >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_learning_experienced_none
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_competent_physician
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_competent_mystic
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_competent_herbalist
+	}
+	text = {
+		trigger = {
+			tc_guest_weight_learning_value > 0
+			tc_guest_weight_learning_value > tc_guest_weight_prowess_value
+			tc_guest_weight_learning_value > tc_guest_weight_martial_value
+			tc_guest_weight_learning_value > tc_guest_weight_diplomacy_value
+			tc_guest_weight_learning_value > tc_guest_weight_stewardship_value
+			tc_guest_weight_learning_value > tc_guest_weight_intrigue_value
+		}
+		localization_key = tc_guest_desc_learning_competent_none
+	}
+	text = {
+		trigger = {
+			prowess >= martial
+			prowess >= diplomacy
+			prowess >= stewardship
+			prowess >= intrigue
+			prowess >= learning
+			prowess >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_prowess_outstanding
+	}
+	text = {
+		trigger = {
+			prowess >= martial
+			prowess >= diplomacy
+			prowess >= stewardship
+			prowess >= intrigue
+			prowess >= learning
+			prowess >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_prowess_experienced
+	}
+	text = {
+		trigger = {
+			prowess >= martial
+			prowess >= diplomacy
+			prowess >= stewardship
+			prowess >= intrigue
+			prowess >= learning
+		}
+		localization_key = tc_guest_desc_prowess_competent
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_outstanding_3
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_outstanding_2
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_outstanding_1
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= extremely_high_skill_rating AND = { martial >= high_skill_rating number_of_commander_traits >= 2 } }
+		}
+		localization_key = tc_guest_desc_martial_outstanding_0
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_experienced_3
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_experienced_2
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_experienced_1
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			OR = { martial >= high_skill_rating number_of_commander_traits >= 2 }
+		}
+		localization_key = tc_guest_desc_martial_experienced_0
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			number_of_commander_traits = 3
+		}
+		localization_key = tc_guest_desc_martial_competent_3
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			number_of_commander_traits = 2
+		}
+		localization_key = tc_guest_desc_martial_competent_2
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+			number_of_commander_traits = 1
+		}
+		localization_key = tc_guest_desc_martial_competent_1
+	}
+	text = {
+		trigger = {
+			martial > prowess
+			martial >= diplomacy
+			martial >= stewardship
+			martial >= intrigue
+			martial >= learning
+		}
+		localization_key = tc_guest_desc_martial_competent_0
+	}
+	text = {
+		trigger = {
+			diplomacy > prowess
+			diplomacy > martial
+			diplomacy >= stewardship
+			diplomacy >= intrigue
+			diplomacy >= learning
+			diplomacy >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_diplomacy_outstanding
+	}
+	text = {
+		trigger = {
+			diplomacy > prowess
+			diplomacy > martial
+			diplomacy >= stewardship
+			diplomacy >= intrigue
+			diplomacy >= learning
+			diplomacy >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_diplomacy_experienced
+	}
+	text = {
+		trigger = {
+			diplomacy > prowess
+			diplomacy > martial
+			diplomacy >= stewardship
+			diplomacy >= intrigue
+			diplomacy >= learning
+		}
+		localization_key = tc_guest_desc_diplomacy_competent
+	}
+	text = {
+		trigger = {
+			stewardship > prowess
+			stewardship > martial
+			stewardship > diplomacy
+			stewardship >= intrigue
+			stewardship >= learning
+			stewardship >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_stewardship_outstanding
+	}
+	text = {
+		trigger = {
+			stewardship > prowess
+			stewardship > martial
+			stewardship > diplomacy
+			stewardship >= intrigue
+			stewardship >= learning
+			stewardship >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_stewardship_experienced
+	}
+	text = {
+		trigger = {
+			stewardship > prowess
+			stewardship > martial
+			stewardship > diplomacy
+			stewardship >= intrigue
+			stewardship >= learning
+		}
+		localization_key = tc_guest_desc_stewardship_competent
+	}
+	text = {
+		trigger = {
+			intrigue > prowess
+			intrigue > martial
+			intrigue > diplomacy
+			intrigue > stewardship
+			intrigue >= learning
+			intrigue >= extremely_high_skill_rating
+		}
+		localization_key = tc_guest_desc_intrigue_outstanding
+	}
+	text = {
+		trigger = {
+			intrigue > prowess
+			intrigue > martial
+			intrigue > diplomacy
+			intrigue > stewardship
+			intrigue >= learning
+			intrigue >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_intrigue_experienced
+	}
+	text = {
+		trigger = {
+			intrigue > prowess
+			intrigue > martial
+			intrigue > diplomacy
+			intrigue > stewardship
+			intrigue >= learning
+		}
+		localization_key = tc_guest_desc_intrigue_competent
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_outstanding_physician
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_outstanding_mystic
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_outstanding_herbalist
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			OR = { learning >= extremely_high_skill_rating AND = { learning >= high_skill_rating OR = { has_trait = lifestyle_herbalist has_trait = lifestyle_physician has_trait = lifestyle_mystic } } }
+		}
+		localization_key = tc_guest_desc_learning_outstanding_none
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			learning >= high_skill_rating
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_experienced_physician
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			learning >= high_skill_rating
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_experienced_mystic
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			learning >= high_skill_rating
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_experienced_herbalist
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			learning >= high_skill_rating
+		}
+		localization_key = tc_guest_desc_learning_experienced_none
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			has_trait = lifestyle_physician
+		}
+		localization_key = tc_guest_desc_learning_competent_physician
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			has_trait = lifestyle_mystic
+		}
+		localization_key = tc_guest_desc_learning_competent_mystic
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+			has_trait = lifestyle_herbalist
+		}
+		localization_key = tc_guest_desc_learning_competent_herbalist
+	}
+	text = {
+		trigger = {
+			learning > prowess
+			learning > martial
+			learning > diplomacy
+			learning > stewardship
+			learning > intrigue
+		}
+		localization_key = tc_guest_desc_learning_competent_none
+	}
+	text = {
+		fallback = yes
+		localization_key = tc_guest_desc_none
+	}
+}
+
+tc_GuestCongenital = {
+	type = character
+
+	text = {
+		trigger = {
+			has_trait = pure_blooded
+		}
+		localization_key = tc_guest_congenital_pure_blooded
+	}
+	text = {
+		trigger = {
+			has_trait = intellect_good_3
+		}
+		localization_key = tc_guest_congenital_intellect_good_3
+	}
+	text = {
+		trigger = {
+			has_trait = physique_good_3
+		}
+		localization_key = tc_guest_congenital_physique_good_3
+	}
+	text = {
+		trigger = {
+			has_trait = beauty_good_3
+		}
+		localization_key = tc_guest_congenital_beauty_good_3
+	}
+	text = {
+		trigger = {
+			has_trait = intellect_good_2
+		}
+		localization_key = tc_guest_congenital_intellect_good_2
+	}
+	text = {
+		trigger = {
+			has_trait = physique_good_2
+		}
+		localization_key = tc_guest_congenital_physique_good_2
+	}
+	text = {
+		trigger = {
+			has_trait = beauty_good_2
+		}
+		localization_key = tc_guest_congenital_beauty_good_2
+	}
+	text = {
+		trigger = {
+			has_trait = intellect_good_1
+		}
+		localization_key = tc_guest_congenital_intellect_good_1
+	}
+	text = {
+		trigger = {
+			has_trait = physique_good_1
+		}
+		localization_key = tc_guest_congenital_physique_good_1
+	}
+	text = {
+		trigger = {
+			has_trait = beauty_good_1
+		}
+		localization_key = tc_guest_congenital_beauty_good_1
+	}
+	text = {
+		trigger = {
+			has_trait = fecund
+		}
+		localization_key = tc_guest_congenital_fecund
+	}
+	text = {
+		fallback = yes
+		localization_key = tc_guest_congenital_none
+	}
+}
+
+tc_CongenitalRuleSetting = {
+	type = character
+
+	text = {
+		trigger = { has_game_rule = tc_maiden_congenital_traits_guaranteed }
+		localization_key = setting_tc_maiden_congenital_traits_guaranteed
+	}
+	text = {
+		trigger = { has_game_rule = tc_maiden_congenital_traits_half_chance }
+		localization_key = setting_tc_maiden_congenital_traits_half_chance
+	}
+	text = {
+		fallback = yes
+		localization_key = setting_tc_maiden_congenital_traits_vanilla
+	}
+}

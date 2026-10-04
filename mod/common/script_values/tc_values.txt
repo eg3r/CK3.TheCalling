@@ -1,0 +1,516 @@
+﻿tc_call_maidens_cost_value = {
+	value = 0
+	if = {
+		limit = { has_game_rule = tc_call_maidens_cost_50 }
+		add = 50
+	}
+	else_if = {
+		limit = { has_game_rule = tc_call_maidens_cost_200 }
+		add = 200
+	}
+	else = {
+		add = 150
+	}
+}
+
+tc_call_maidens_cooldown_years_value = {
+	value = 0
+	if = {
+		limit = { has_game_rule = tc_call_maidens_cooldown_1_year }
+		add = 1
+	}
+	else_if = {
+		limit = { has_game_rule = tc_call_maidens_cooldown_3_years }
+		add = 3
+	}
+	else = {
+		add = 2
+	}
+}
+
+tc_guest_weight_prowess_value = {
+	value = 0
+	if = {
+		limit = { prowess >= decent_skill_rating }
+		add = {
+			value = prowess
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 150
+	}
+}
+tc_guest_weight_martial_value = {
+	value = 0
+	if = {
+		limit = { martial >= decent_skill_rating }
+		add = {
+			value = martial
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 120
+		add = {
+			value = number_of_commander_traits
+			multiply = 15
+		}
+	}
+}
+tc_guest_weight_diplomacy_value = {
+	value = 0
+	if = {
+		limit = { diplomacy >= decent_skill_rating }
+		add = {
+			value = diplomacy
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 100
+	}
+}
+tc_guest_weight_stewardship_value = {
+	value = 0
+	if = {
+		limit = { stewardship >= decent_skill_rating }
+		add = {
+			value = stewardship
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 100
+	}
+}
+tc_guest_weight_intrigue_value = {
+	value = 0
+	if = {
+		limit = { intrigue >= decent_skill_rating }
+		add = {
+			value = intrigue
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 70
+	}
+}
+tc_guest_weight_learning_value = {
+	value = 0
+	if = {
+		limit = { learning >= decent_skill_rating }
+		add = {
+			value = learning
+			subtract = decent_skill_rating
+			multiply = 10
+		}
+		add = 70
+		if = {
+			limit = {
+				OR = {
+					has_trait = lifestyle_herbalist
+					has_trait = lifestyle_physician
+					has_trait = lifestyle_mystic
+				}
+			}
+			add = 50
+		}
+	}
+}
+
+tc_call_reach_value = {
+	value = squared_distance_medium
+	if = {
+		limit = { highest_held_title_tier >= tier_empire }
+		value = squared_distance_huge
+	}
+	else_if = {
+		limit = { highest_held_title_tier = tier_kingdom }
+		value = squared_distance_large
+	}
+	else_if = {
+		limit = { highest_held_title_tier = tier_duchy }
+		value = squared_distance_major
+	}
+}
+
+tc_maiden_max_age_value = {
+	value = 25
+	if = {
+		limit = { has_variable = tc_call_lock_age }
+		value = var:tc_call_lock_age
+	}
+}
+
+tc_maiden_candidate_score_value = {
+	value = tc_guest_weight_prowess_value
+	min = tc_guest_weight_martial_value
+	min = tc_guest_weight_diplomacy_value
+	min = tc_guest_weight_stewardship_value
+	min = tc_guest_weight_intrigue_value
+	min = tc_guest_weight_learning_value
+	add = {
+		value = genetic_character_value
+		multiply = 100
+	}
+	if = {
+		limit = {
+			has_game_rule = tc_maiden_congenital_traits_half_chance
+			tc_has_positive_congenital_trigger = yes
+		}
+		add = 10000
+	}
+}
+
+tc_call_invite_score_value = {
+	value = -50
+	add = {
+		value = "opinion(root)"
+		multiply = 0.1
+		if = {
+			limit = {
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			floor = yes
+		}
+		else = {
+			ceiling = yes
+		}
+		multiply = 5
+		max = 25
+	}
+	if = {
+		limit = {
+			exists = liege
+			is_courtier_of = liege
+		}
+		add = {
+			value = "opinion(liege)"
+			multiply = -0.1
+			if = {
+				limit = {
+					opinion = {
+						target = liege
+						value >= 0
+					}
+				}
+				ceiling = yes
+			}
+			else = {
+				floor = yes
+			}
+			multiply = 5
+			max = 25
+		}
+	}
+	if = {
+		limit = {
+			has_variable = non_recruitable_var
+			var:non_recruitable_var = root
+		}
+		add = -200
+	}
+	if = {
+		limit = { is_knight = yes }
+		add = -20
+	}
+	if = {
+		limit = { is_commanding_army = yes }
+		add = -30
+	}
+	if = {
+		limit = { is_councillor = yes }
+		add = -40
+	}
+	if = {
+		limit = { has_court_position = court_physician_court_position }
+		add = -20
+	}
+	if = {
+		limit = { has_relation_lover = root }
+		add = 100
+	}
+	if = {
+		limit = { has_relation_friend = root }
+		add = 75
+	}
+	if = {
+		limit = { is_child_of = root }
+		add = 160
+	}
+	if = {
+		limit = { dynasty ?= { dynast = root } }
+		add = 30
+	}
+	if = {
+		limit = { house ?= { house_head = root } }
+		add = 60
+	}
+	if = {
+		limit = { top_liege ?= root }
+		add = 60
+	}
+	if = {
+		limit = {
+			NOT = { is_child_of = root }
+			NOT = { is_close_family_of = root }
+			is_extended_family_of = root
+		}
+		add = 30
+	}
+	if = {
+		limit = {
+			NOT = { is_child_of = root }
+			is_close_family_of = root
+		}
+		add = 75
+	}
+	if = {
+		limit = {
+			exists = liege
+			has_relation_lover = liege
+		}
+		add = -100
+	}
+	if = {
+		limit = {
+			exists = liege
+			has_relation_friend = liege
+		}
+		add = -75
+	}
+	if = {
+		limit = {
+			exists = liege
+			is_child_of = liege
+		}
+		add = -160
+	}
+	if = {
+		limit = {
+			exists = liege
+			NOT = { is_child_of = liege }
+			is_close_family_of = liege
+		}
+		add = -75
+	}
+	if = {
+		limit = {
+			exists = location
+			any_child_not_in_traveling_family_trigger = yes
+		}
+		add = -100
+	}
+	if = {
+		limit = {
+			inspiration ?= {
+				NOT = { exists = inspiration_sponsor }
+			}
+		}
+		add = -50
+	}
+	if = {
+		limit = {
+			inspiration ?= { exists = inspiration_sponsor }
+		}
+		add = -500
+	}
+	if = {
+		limit = {
+			is_child_of = root
+			has_character_modifier = lust_for_adventure
+		}
+		add = -500
+	}
+	if = {
+		limit = {
+			is_pool_guest = no
+			location.province_owner ?= {
+				OR = {
+					any_liege_or_above = { this = root }
+					this = root
+				}
+			}
+			NOR = {
+				has_relation_rival = root
+				exists = liege
+				is_child_of = root
+				has_character_modifier = lust_for_adventure
+			}
+		}
+		add = 10
+		add = root.diplomacy
+		if = {
+			limit = { faith = root.faith }
+			add = 10
+		}
+		else_if = {
+			limit = {
+				faith = {
+					religion = root.faith.religion
+					faith_hostility_level = {
+						target = root.faith
+						value < 2
+					}
+				}
+			}
+			add = 5
+		}
+		if = {
+			limit = { culture = root.culture }
+			add = 10
+		}
+		else_if = {
+			limit = {
+				culture = { has_same_culture_heritage = root.culture }
+			}
+			add = 5
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = content
+					has_trait = lazy
+					has_trait = trusting
+				}
+			}
+			add = 10
+		}
+	}
+	if = {
+		limit = {
+			root = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+				amenity_level = { target = court_lodging_standards value >= medium_amenity_level }
+			}
+		}
+		add = 10
+		if = {
+			limit = {
+				root = { amenity_level = { target = court_lodging_standards value >= high_amenity_level } }
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				root = { amenity_level = { target = court_lodging_standards value >= very_high_amenity_level } }
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				root = { amenity_level = { target = court_lodging_standards value >= max_amenity_level } }
+			}
+			add = 20
+		}
+	}
+	if = {
+		limit = {
+			exists = liege
+			is_courtier_of = liege
+			liege = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+				amenity_level = { target = court_lodging_standards value >= medium_amenity_level }
+			}
+		}
+		add = -10
+		if = {
+			limit = {
+				liege = { amenity_level = { target = court_lodging_standards value >= high_amenity_level } }
+			}
+			add = -10
+		}
+		if = {
+			limit = {
+				liege = { amenity_level = { target = court_lodging_standards value >= very_high_amenity_level } }
+			}
+			add = -10
+		}
+		if = {
+			limit = {
+				liege = { amenity_level = { target = court_lodging_standards value >= max_amenity_level } }
+			}
+			add = -20
+		}
+	}
+	if = {
+		limit = {
+			root = { government_has_flag = government_is_clan }
+			exists = house
+			exists = root.house
+			house = root.house
+			house = {
+				OR = {
+					has_house_unity_stage = harmonious
+					has_house_unity_stage = friendly
+				}
+			}
+		}
+		add = {
+			value = root.house.house_unity_value
+			multiply = 0.5
+		}
+	}
+	if = {
+		limit = {
+			root = {
+				domicile ?= { has_domicile_parameter = estate_increase_invite_to_court_acceptance }
+			}
+		}
+		add = estate_invite_to_court_acceptance_value
+	}
+	if = {
+		limit = {
+			root = { has_personal_tenet_flag = tenet_ritual_hospitality_invite_to_court_acceptance }
+		}
+		add = 50
+	}
+	if = {
+		limit = {
+			is_eunuch_trigger = yes
+			liege ?= {
+				government_has_mechanic = administrative
+				primary_title.tier >= tier_empire
+				culture = { has_cultural_parameter = can_appoint_chief_eunuch }
+			}
+		}
+		add = -1000
+	}
+	if = {
+		limit = {
+			has_trait = devoted
+			liege ?= {
+				OR = {
+					government_has_flag = government_is_theocracy
+					government_has_flag = government_is_monastic_holy_order
+				}
+				faith = prev.faith
+			}
+		}
+		add = -100
+	}
+	if = {
+		limit = {
+			root.culture = { has_cultural_parameter = invite_courtiers_reasons }
+		}
+		add = 15
+	}
+	if = {
+		limit = {
+			has_variable = cid_1010_no_invite_var
+			var:cid_1010_no_invite_var = root
+		}
+		add = -200
+	}
+}
+
+tc_call_acceptance_bonus_value = {
+	value = 50
+}
+
+tc_call_acceptance_value = {
+	value = tc_call_invite_score_value
+	add = tc_call_acceptance_bonus_value
+}

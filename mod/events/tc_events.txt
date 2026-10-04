@@ -1,0 +1,90 @@
+﻿namespace = the_calling
+
+the_calling.0001 = {
+	type = character_event
+	title = the_calling.0001.t
+	desc = the_calling.0001.desc
+	theme = court
+	left_portrait = {
+		character = scope:maiden_1
+		animation = personality_content
+	}
+	right_portrait = {
+		character = scope:maiden_2
+		animation = personality_content
+	}
+	lower_center_portrait = {
+		character = scope:maiden_3
+		animation = personality_content
+	}
+
+	trigger = {
+		is_landed = yes
+		exists = capital_county
+	}
+	on_trigger_fail = {
+		add_prestige = tc_call_maidens_cost_value
+		remove_decision_cooldown = tc_call_maidens_decision
+		tc_call_clear_lock_effect = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = tc_call_lock_age } }
+				tc_call_lock_options_effect = yes
+			}
+			tc_find_real_maidens_effect = yes
+			tc_fill_maiden_slot_effect = { MAIDEN = maiden_1 }
+			tc_fill_maiden_slot_effect = { MAIDEN = maiden_2 }
+			tc_fill_maiden_slot_effect = { MAIDEN = maiden_3 }
+		}
+	}
+
+	option = {
+		name = the_calling.0001.a
+		highlight_portrait = scope:maiden_1
+		trigger = { tc_maiden_option_valid_trigger = { MAIDEN = maiden_1 } }
+		tc_take_maiden_effect = { MAIDEN = maiden_1 }
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = the_calling.0001.c
+		highlight_portrait = scope:maiden_3
+		trigger = { tc_maiden_option_valid_trigger = { MAIDEN = maiden_3 } }
+		tc_take_maiden_effect = { MAIDEN = maiden_3 }
+		ai_chance = {
+			base = 40
+		}
+	}
+	option = {
+		name = the_calling.0001.b
+		highlight_portrait = scope:maiden_2
+		trigger = { tc_maiden_option_valid_trigger = { MAIDEN = maiden_2 } }
+		tc_take_maiden_effect = { MAIDEN = maiden_2 }
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = the_calling.0001.none
+		trigger = {
+			NOR = {
+				tc_maiden_option_valid_trigger = { MAIDEN = maiden_1 }
+				tc_maiden_option_valid_trigger = { MAIDEN = maiden_2 }
+				tc_maiden_option_valid_trigger = { MAIDEN = maiden_3 }
+			}
+		}
+		add_prestige = tc_call_maidens_cost_value
+		remove_decision_cooldown = tc_call_maidens_decision
+	}
+
+	after = {
+		scope:maiden_1 ?= { tc_settle_called_candidate_effect = yes }
+		scope:maiden_2 ?= { tc_settle_called_candidate_effect = yes }
+		scope:maiden_3 ?= { tc_settle_called_candidate_effect = yes }
+		tc_call_clear_lock_effect = yes
+	}
+}

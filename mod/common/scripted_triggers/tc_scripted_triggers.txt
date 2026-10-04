@@ -1,0 +1,131 @@
+﻿tc_in_call_reach_trigger = {
+	exists = capital_province
+	capital_province = {
+		squared_distance = {
+			target = scope:tc_call_center
+			value <= root.tc_call_reach_value
+		}
+	}
+}
+
+tc_maiden_candidate_trigger = {
+	tc_maiden_basic_trigger = yes
+	tc_maiden_family_trigger = yes
+	tc_maiden_options_trigger = yes
+	tc_maiden_trait_rule_trigger = yes
+	tc_would_accept_call_trigger = yes
+}
+
+tc_maiden_basic_trigger = {
+	is_female = yes
+	is_adult = yes
+	age <= root.tc_maiden_max_age_value
+	is_married = no
+	is_betrothed = no
+	is_concubine = no
+	NOT = { any_former_spouse = { always = yes } }
+	is_ruler = no
+	is_ai = yes
+	is_imprisoned = no
+	NOT = { is_courtier_of = root }
+	num_of_bad_genetic_traits = 0
+}
+
+tc_maiden_family_trigger = {
+	NOT = {
+		any_parent = {
+			is_alive = yes
+			is_ruler = yes
+		}
+	}
+}
+
+tc_maiden_options_trigger = {
+	trigger_if = {
+		limit = { root.var:tc_call_lock_birth ?= flag:noble }
+		is_lowborn = no
+	}
+	trigger_else_if = {
+		limit = { root.var:tc_call_lock_birth ?= flag:lowborn }
+		is_lowborn = yes
+	}
+	trigger_else = { always = yes }
+	trigger_if = {
+		limit = { root.var:tc_call_lock_faith ?= flag:mine }
+		faith = root.faith
+	}
+	trigger_else_if = {
+		limit = { root.var:tc_call_lock_faith ?= flag:accepted }
+		faith = { save_temporary_scope_as = tc_candidate_faith }
+		root.faith = {
+			faith_hostility_level = {
+				target = scope:tc_candidate_faith
+				value <= faith_astray_level
+			}
+		}
+	}
+	trigger_else = { always = yes }
+	trigger_if = {
+		limit = { root.var:tc_call_lock_culture ?= flag:mine }
+		culture = root.culture
+	}
+}
+
+tc_maiden_trait_rule_trigger = {
+	trigger_if = {
+		limit = { has_game_rule = tc_maiden_congenital_traits_guaranteed }
+		tc_has_positive_congenital_trigger = yes
+	}
+}
+
+tc_has_positive_congenital_trigger = {
+	OR = {
+		num_of_good_genetic_traits > 0
+		has_trait = pure_blooded
+	}
+}
+
+tc_would_accept_call_trigger = {
+	save_temporary_scope_as = tc_candidate
+	root = {
+		is_character_interaction_valid = {
+			recipient = scope:tc_candidate
+			interaction = invite_to_court_interaction
+		}
+	}
+	tc_call_acceptance_value >= 0
+}
+
+tc_maiden_origin_county_trigger = {
+	trigger_if = {
+		limit = { root.var:tc_call_lock_culture ?= flag:mine }
+		culture = root.culture
+	}
+	trigger_if = {
+		limit = { root.var:tc_call_lock_faith ?= flag:mine }
+		faith = root.faith
+	}
+	trigger_else_if = {
+		limit = { root.var:tc_call_lock_faith ?= flag:accepted }
+		faith = { save_temporary_scope_as = tc_candidate_faith }
+		root.faith = {
+			faith_hostility_level = {
+				target = scope:tc_candidate_faith
+				value <= faith_astray_level
+			}
+		}
+	}
+	trigger_else = { always = yes }
+}
+
+tc_maiden_option_valid_trigger = {
+	exists = scope:$MAIDEN$
+	scope:$MAIDEN$ = {
+		is_alive = yes
+		trigger_if = {
+			limit = { NOT = { has_character_flag = tc_created_maiden } }
+			NOT = { is_courtier_of = root }
+			tc_would_accept_call_trigger = yes
+		}
+	}
+}

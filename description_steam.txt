@@ -1,0 +1,26 @@
+[h1]The Calling - Courtiers of Renown[/h1]
+
+[b]Call talented maidens to your court and choose who joins it.[/b]
+
+[h2]Key Features[/h2]
+[list]
+[*] [b]Call Maidens to Court[/b] - A new decision for landed rulers, child rulers included: three maidens arrive, you choose one
+[*] [b]Real People First[/b] - Willing unmarried women within your reach answer the call; your reach grows with your title. New maidens fill the places only if too few answer
+[*] [b]Choose Who You Call[/b] - Pick age, birth, faith and culture right on the decision screen
+[*] [b]Know Who You Choose[/b] - Each maiden is described like a court guest: her best skill and her best congenital trait
+[*] [b]She Stays[/b] - The maiden you choose won't leave your court for 10 years
+[*] [b]Game Rules[/b] - Cost, cooldown, real or created candidates, and the chance of a positive congenital trait
+[*] [b]Multi-Language Support[/b] - English, French, German, Spanish, Polish, Russian, Japanese, Korean and Chinese
+[/list]
+
+[h2]How It Works[/h2]
+[olist]
+[*] Select [b]Call Maidens to Court[/b] in the Decisions tab, choose who you call and send out the call
+[*] A week later, choose the maiden who joins your court
+[/olist]
+
+[h2]Compatibility[/h2]
+Supports CK3 1.20.*. Overwrites no vanilla files. Achievements stay enabled with the default game rules.
+
+[h2]Support[/h2]
+Found a bug or have a suggestion? Please report it in the discussions section!

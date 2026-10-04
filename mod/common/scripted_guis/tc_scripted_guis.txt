@@ -1,0 +1,215 @@
+﻿tc_call_set_age_20 = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_max_age value = 20 }
+	}
+}
+
+tc_call_is_age_20 = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_max_age
+			var:tc_call_max_age = 20
+		}
+	}
+}
+
+tc_call_set_age_25 = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_max_age value = 25 }
+	}
+}
+
+tc_call_is_age_25 = {
+	scope = character
+	is_shown = {
+		OR = {
+			NOT = { has_variable = tc_call_max_age }
+			AND = {
+				has_variable = tc_call_max_age
+				var:tc_call_max_age = 25
+			}
+		}
+	}
+}
+
+tc_call_set_age_30 = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_max_age value = 30 }
+	}
+}
+
+tc_call_is_age_30 = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_max_age
+			var:tc_call_max_age = 30
+		}
+	}
+}
+
+tc_call_set_age_40 = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_max_age value = 40 }
+	}
+}
+
+tc_call_is_age_40 = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_max_age
+			var:tc_call_max_age = 40
+		}
+	}
+}
+
+tc_call_set_birth_noble = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_birth value = flag:noble }
+	}
+}
+
+tc_call_is_birth_noble = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_birth
+			var:tc_call_birth = flag:noble
+		}
+	}
+}
+
+tc_call_set_birth_lowborn = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_birth value = flag:lowborn }
+	}
+}
+
+tc_call_is_birth_lowborn = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_birth
+			var:tc_call_birth = flag:lowborn
+		}
+	}
+}
+
+tc_call_set_birth_both = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_birth value = flag:both }
+	}
+}
+
+tc_call_is_birth_both = {
+	scope = character
+	is_shown = {
+		OR = {
+			NOT = { has_variable = tc_call_birth }
+			AND = {
+				has_variable = tc_call_birth
+				var:tc_call_birth = flag:both
+			}
+		}
+	}
+}
+
+tc_call_set_faith_any = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_faith value = flag:any }
+	}
+}
+
+tc_call_is_faith_any = {
+	scope = character
+	is_shown = {
+		OR = {
+			NOT = { has_variable = tc_call_faith }
+			AND = {
+				has_variable = tc_call_faith
+				var:tc_call_faith = flag:any
+			}
+		}
+	}
+}
+
+tc_call_set_faith_mine = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_faith value = flag:mine }
+	}
+}
+
+tc_call_is_faith_mine = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_faith
+			var:tc_call_faith = flag:mine
+		}
+	}
+}
+
+tc_call_set_faith_accepted = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_faith value = flag:accepted }
+	}
+}
+
+tc_call_is_faith_accepted = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_faith
+			var:tc_call_faith = flag:accepted
+		}
+	}
+}
+
+tc_call_set_culture_any = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_culture value = flag:any }
+	}
+}
+
+tc_call_is_culture_any = {
+	scope = character
+	is_shown = {
+		OR = {
+			NOT = { has_variable = tc_call_culture }
+			AND = {
+				has_variable = tc_call_culture
+				var:tc_call_culture = flag:any
+			}
+		}
+	}
+}
+
+tc_call_set_culture_mine = {
+	scope = character
+	effect = {
+		set_variable = { name = tc_call_culture value = flag:mine }
+	}
+}
+
+tc_call_is_culture_mine = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = tc_call_culture
+			var:tc_call_culture = flag:mine
+		}
+	}
+}

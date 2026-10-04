@@ -1,0 +1,71 @@
+﻿tc_maiden_congenital_traits = {
+	categories = {
+		tweaks
+		the_calling
+	}
+
+	default = tc_maiden_congenital_traits_vanilla
+
+	tc_maiden_congenital_traits_guaranteed = {
+		flag = blocks_achievements
+	}
+
+	tc_maiden_congenital_traits_half_chance = {
+	}
+
+	tc_maiden_congenital_traits_vanilla = {
+	}
+}
+
+tc_call_maidens_cooldown = {
+	categories = {
+		tweaks
+		the_calling
+	}
+
+	default = tc_call_maidens_cooldown_2_years
+
+	tc_call_maidens_cooldown_1_year = {
+		flag = blocks_achievements
+	}
+
+	tc_call_maidens_cooldown_2_years = {
+	}
+
+	tc_call_maidens_cooldown_3_years = {
+	}
+}
+
+tc_call_maidens_cost = {
+	categories = {
+		tweaks
+		the_calling
+	}
+
+	default = tc_call_maidens_cost_150
+
+	tc_call_maidens_cost_50 = {
+		flag = blocks_achievements
+	}
+
+	tc_call_maidens_cost_150 = {
+	}
+
+	tc_call_maidens_cost_200 = {
+	}
+}
+
+tc_maiden_source = {
+	categories = {
+		tweaks
+		the_calling
+	}
+
+	default = tc_maiden_source_real_first
+
+	tc_maiden_source_real_first = {
+	}
+
+	tc_maiden_source_created = {
+	}
+}

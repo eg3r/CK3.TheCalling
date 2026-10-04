@@ -1,0 +1,202 @@
+﻿vbox = {
+	name = "decision_view_widget_tc_call_options"
+	layoutpolicy_horizontal = expanding
+	margin = { 15 5 }
+	spacing = 2
+
+	text_label_left = {
+		layoutpolicy_horizontal = expanding
+		text = "tc_call_ui_age"
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		margin_left = 10
+		margin_bottom = 4
+		spacing = 14
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_age_20').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_age_20').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_age_20"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_age_25').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_age_25').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_age_25"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_age_30').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_age_30').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_age_30"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_age_40').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_age_40').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_age_40"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		expand = {}
+	}
+
+	text_label_left = {
+		layoutpolicy_horizontal = expanding
+		text = "tc_call_ui_birth"
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		margin_left = 10
+		margin_bottom = 4
+		spacing = 14
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_birth_noble').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_birth_noble').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_birth_noble"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_birth_lowborn').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_birth_lowborn').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_birth_lowborn"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_birth_both').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_birth_both').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_birth_both"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		expand = {}
+	}
+
+	text_label_left = {
+		layoutpolicy_horizontal = expanding
+		text = "tc_call_ui_faith"
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		margin_left = 10
+		margin_bottom = 4
+		spacing = 14
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_faith_any').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_faith_any').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_faith_any"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_faith_mine').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_faith_mine').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_faith_mine"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_faith_accepted').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_faith_accepted').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_faith_accepted"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		expand = {}
+	}
+
+	text_label_left = {
+		layoutpolicy_horizontal = expanding
+		text = "tc_call_ui_culture"
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		margin_left = 10
+		margin_bottom = 4
+		spacing = 14
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_culture_any').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_culture_any').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_culture_any"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		button_radio_label = {
+			onclick = "[GetScriptedGui('tc_call_set_culture_mine').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+			blockoverride "radio" {
+				frame = "[BoolTo1And2( GetScriptedGui('tc_call_is_culture_mine').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+			}
+			blockoverride "text" {
+				text = "tc_call_ui_culture_mine"
+				max_width = 110
+				fontsize_min = 11
+			}
+		}
+		expand = {}
+	}
+
+	text_label_left = {
+		layoutpolicy_horizontal = expanding
+		text = "tc_call_ui_congenital"
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		margin_left = 10
+		margin_bottom = 4
+		text_single = {
+			text = "[GetPlayer.Custom('tc_CongenitalRuleSetting')]"
+			default_format = "#high"
+			align = left|nobaseline
+		}
+		expand = {}
+	}
+}

@@ -1,0 +1,47 @@
+﻿tc_call_maidens_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds" }
+	desc = tc_call_maidens_decision_desc
+	selection_tooltip = tc_call_maidens_decision_tooltip
+	decision_group_type = courtier
+	widget = {
+		gui = "decision_view_widget_tc_call_options"
+		controller = decision_option_list_controller
+		item = {
+			value = tc_call_options
+			localization = tc_call_maidens_decision
+			is_default = yes
+			ai_chance = {
+				value = 1
+			}
+		}
+	}
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		NOT = { has_trait = incapable }
+	}
+	cooldown = {
+		years = tc_call_maidens_cooldown_years_value
+	}
+	cost = {
+		prestige = tc_call_maidens_cost_value
+	}
+	effect = {
+		custom_tooltip = tc_call_maidens_decision_effect_tt
+		tc_call_lock_options_effect = yes
+		trigger_event = {
+			id = the_calling.0001
+			days = 7
+		}
+	}
+	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
